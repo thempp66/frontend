@@ -1,0 +1,82 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Calendar"})
+
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Address</th>
+                                                        <th>PID</th>
+                                                        <th>Apps</th>
+                                                        <th>Public Key</th>
+                                                        <th>Attestation</th>
+                                                        <th>State</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="cursor:pointer" onclick="window.location='apps-nodes-detail.html'">
+                                                        <td>127.0.0.1:1234</td>
+                                                        <td>652417</td>
+                                                        <td>meta-llama/meta-llama-3.1-8b-instruct</td>
+                                                        <td>0x1234567890abcdef</td>
+                                                        <td>0x1234567890abcdef</td>
+                                                        <td><span class="badge bg-success">Running</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include("partials/footer.html")
+
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- calendar min js -->
+        <script src="assets/libs/fullcalendar/index.global.min.js"></script>
+        <!-- Calendar init -->
+        <script src="assets/js/pages/calendar.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

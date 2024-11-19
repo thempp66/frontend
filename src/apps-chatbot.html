@@ -1,0 +1,95 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Calendar"})
+
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Apps</th>
+                                                        <th>Type</th>
+                                                        <th>UpdateTime</th>
+                                                        <th>Downloads</th>
+                                                        <th>Likes</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="cursor:pointer" onclick="window.location='apps-nodes.html'">
+                                                        <td>meta-llama/meta-llama-3.1-8b-instruct</td>
+                                                        <td><span class="badge bg-primary">NLP</span></td>
+                                                        <td>2024-11-19</td>
+                                                        <td><i class="mdi mdi-download"></i> 1,424</td>
+                                                        <td><i class="mdi mdi-heart-outline text-danger"></i> 568</td>
+                                                    </tr>
+                                                    <tr style="cursor:pointer" onclick="window.location='apps-nodes.html'">
+                                                        <td>stabilityai/stable-diffusion-3.5-large</td>
+                                                        <td><span class="badge bg-success">TEXT_TO_IMAGE</span></td>
+                                                        <td>2024-01-14</td>
+                                                        <td><i class="mdi mdi-download"></i> 2,156</td>
+                                                        <td><i class="mdi mdi-heart-outline text-danger"></i> 892</td>
+                                                    </tr>
+                                                    <tr style="cursor:pointer" onclick="window.location='apps-nodes.html'">
+                                                        <td>microsoft/speecht5_tts</td>
+                                                        <td><span class="badge bg-info">TEXT_TO_SPEECH</span></td>
+                                                        <td>2024-01-14</td>
+                                                        <td><i class="mdi mdi-download"></i> 3,789</td>
+                                                        <td><i class="mdi mdi-heart-outline text-danger"></i> 1,245</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Page-content -->
+
+                @@include("partials/footer.html")
+
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- calendar min js -->
+        <script src="assets/libs/fullcalendar/index.global.min.js"></script>
+        <!-- Calendar init -->
+        <script src="assets/js/pages/calendar.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
